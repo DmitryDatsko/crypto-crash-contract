@@ -1,4 +1,4 @@
-import hardhatToolboxMochaEthersPlugin from "@nomicfoundation/hardhat-toolbox-mocha-ethers"
+import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem"
 import hardhatVerify from "@nomicfoundation/hardhat-verify"
 import 'dotenv/config'
 import { defineConfig } from "hardhat/config"
@@ -7,7 +7,7 @@ const INFURA_KEY = process.env.INFURA_API_KEY;
 const DEPLOYER = process.env.SEPOLIA_PRIVATE_KEY;
 
 export default defineConfig({
-	plugins: [hardhatToolboxMochaEthersPlugin, hardhatVerify],
+	plugins: [hardhatToolboxViemPlugin, hardhatVerify],
 	solidity: { version: "0.8.28" },
 	networks: {
 		sepolia: {
